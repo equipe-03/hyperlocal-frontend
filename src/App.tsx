@@ -1,7 +1,10 @@
+import { Category } from "./PAGES/category/category";
 
 
 function App() {
-  return (<>CARDÁPIO</>);
+  return (
+  <Category/>
+  );
 }
 
 export default App;
