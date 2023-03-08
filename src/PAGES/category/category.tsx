@@ -1,5 +1,5 @@
+import './category.css'
 import { useState } from "react"
-// import { categoria } from "../../API/category-in-memory"
 import { CardCategory } from "../../COMPONENTS/card-category/card-category"
 import { CategoryPayload } from "../../TYPES/category"
 
@@ -16,19 +16,19 @@ export function Category() {
     {
         image: 'https://i.pinimg.com/736x/32/e0/b9/32e0b9f02fb5a91141706197d399d7fe.jpg',
         name: 'Sobremesa'
+    },
+    {
+        image: 'https://paraisodacozinha.com.br/wp-content/uploads/2015/10/Petiscos.jpg',
+        name: 'Petiscos'
     }]
 
-    const [categoryList, setCategoryList] = useState<CategoryPayload[]>([])
+    const [categoryList, setCategoryList] = useState<CategoryPayload[]>(categoria)
 
-    function CategoryFunction() {
-        setCategoryList(categoria)
-        console.log(categoria)
-    }
     return (
         <div className="categorys">
             <h2>CATEGORIAS</h2>
-            <div className="teste">{categoryList.map((categoria) => (
-                <CardCategory category={categoria} />
+            <div className="category-container">{categoryList.map((item) => (
+                <CardCategory category={item} />
             ))}</div>
         </div>
     )
