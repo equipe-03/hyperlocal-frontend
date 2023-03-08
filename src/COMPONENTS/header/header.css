@@ -1,0 +1,18 @@
+.title {
+    color: #fffdfd;
+    display: flex;
+    width: 254px;
+    height: 35px;
+    left: 16px;
+    top: 102px;
+    font-family: "Lato";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 110%;
+}
+
+
+.header{
+    background: #ce3246;
+}
