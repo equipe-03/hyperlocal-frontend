@@ -4,10 +4,7 @@ import { Category } from "./PAGES/category/category";
 
 function App() {
   return (
-    <>
-    < Header />
-    < Category />
-    </>
+    <div>Desenvolvimento</div>
   );
 }
 
