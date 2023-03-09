@@ -1,7 +1,7 @@
 import './category.css'
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faBurger, faChampagneGlasses, faCookieBite } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faBurger, faChampagneGlasses, faCookieBite, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
 import { CardCategory } from "../../COMPONENTS/card-category/card-category"
 import { CategoryPayload } from "../../TYPES/category"
 
@@ -9,19 +9,19 @@ import { CategoryPayload } from "../../TYPES/category"
 export function Category() {
     const categoria = [{
         image: < FontAwesomeIcon icon={faBurger}/>,
-        name: 'Burguer'
+        name: 'Burguers'
     },
     {
         image: < FontAwesomeIcon icon={faChampagneGlasses}/>,
-        name: 'Bebida'
+        name: 'Bebidas'
     },
     {
         image: < FontAwesomeIcon icon={faCookieBite}/>,
-        name: 'Sobremesa'
+        name: 'Sobremesas'
     },
     {
-        image: < FontAwesomeIcon icon={faCoffee}/>,
-        name: 'Petiscos'
+        image: < FontAwesomeIcon icon={faPizzaSlice}/>,
+        name: 'Pizzas'
     }]
 
     const [categoryList, setCategoryList] = useState<CategoryPayload[]>(categoria)
