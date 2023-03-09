@@ -13,11 +13,9 @@
     border-radius: 8px;
 }
 
-.img-category{
-    width: 54px;
-    height: 44.8px;
-    left: 53px;
-    top: 16.6px;
+.icon-category{
+   font-size: 3rem;
+   color: #CE3246;
 }
 
 .title-category{

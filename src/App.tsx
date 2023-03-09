@@ -1,8 +1,9 @@
+import { Category } from "./PAGES/category/category";
 
 
 function App() {
   return (
-    <div>Desenvolvimento</div>
+    < Category />
   );
 }
 
