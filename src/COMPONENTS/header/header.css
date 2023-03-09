@@ -1,18 +1,45 @@
 .title {
-    color: #fffdfd;
-    display: flex;
-    width: 254px;
-    height: 35px;
-    left: 16px;
-    top: 102px;
-    font-family: "Lato";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 32px;
-    line-height: 110%;
+  display: flex;
+  color: #fbebed;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+  text-align: center;
 }
 
+.title2 {
+  color: #fffdfd;
+  width: 100%;
+  margin: 8px 0px 0px;
+  padding: 0px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+}
 
-.header{
-    background: #ce3246;
+.header {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+  flex-direction: column;
+  display: flex;
+  height: 200px;
+  background: #ce3246;
+}
+
+.search {
+  text-align: center;
+  position: absolute;
+  width: calc(100% - 80px);
+  bottom: -28px;
+  height: 56px;
+  padding: 16px 24px;
 }

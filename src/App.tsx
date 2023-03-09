@@ -1,9 +1,5 @@
-
-
 function App() {
-  return (
-    <div>Desenvolvimento</div>
-  );
+  return <div>Desenvolvimento</div>;
 }
 
 export default App;
