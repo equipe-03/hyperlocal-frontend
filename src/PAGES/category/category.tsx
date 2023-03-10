@@ -1,7 +1,7 @@
 import './category.css'
 import { useState } from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faBurger, faChampagneGlasses, faCookieBite, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
+import { faBurger, faChampagneGlasses, faCookieBite, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
 import { CardCategory } from "../../COMPONENTS/card-category/card-category"
 import { CategoryPayload } from "../../TYPES/category"
 
