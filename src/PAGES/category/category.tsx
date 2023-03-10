@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBurger, faChampagneGlasses, faCookieBite, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
 import { CardCategory } from "../../COMPONENTS/card-category/card-category"
 import { CategoryPayload } from "../../TYPES/category"
+import { Header } from '../../COMPONENTS/header/header'
+import { FooterHome } from '../../COMPONENTS/footer-home/footer-home'
 
 
 export function Category() {
@@ -27,12 +29,16 @@ export function Category() {
     const [categoryList, setCategoryList] = useState<CategoryPayload[]>(categoria)
 
     return (
+        <>
+        < Header />
         <div className="categorys">
             <h2 className='category-h2'>CATEGORIAS</h2>
             <div className="category-container">{categoryList.map((item) => (
                 <CardCategory category={item} />  
             ))}</div>
         </div>
+        < FooterHome />
+        </>
     )
 }
 
