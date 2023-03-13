@@ -1,8 +1,11 @@
 
+import { Side } from "./COMPONENTS/sidebar/sidebar";
+
 
 function App() {
   return (
-    <div>Desenvolvimento</div>
+    <Side />
+    
   );
 }
 
