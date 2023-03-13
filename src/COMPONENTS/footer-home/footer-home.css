@@ -1,0 +1,30 @@
+.card-footer-home {
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    width: 100vw;
+    background-color: #FFFDFD;
+}
+
+.cardapio {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 5px;
+    margin-left: 25px; 
+    font-size: 1.5rem;
+    color: #B1AFAF;
+}
+
+.pedido {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    gap: 5px;
+    margin-right: 25px; 
+    font-size: 1.5rem;
+    color: #B1AFAF;
+}

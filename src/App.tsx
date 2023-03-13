@@ -1,11 +1,13 @@
-
+import { Category } from "./PAGES/category/category";
 import { Side } from "./COMPONENTS/sidebar/sidebar";
-
 
 function App() {
   return (
-    <Side />
-    
+    <div>
+      < Category />
+      <Side />
+    </div>
+
   );
 }
 
