@@ -1,3 +1,4 @@
+import React from 'react'
 import { ItemPayload } from '../../TYPES/item'
 import './card-item.css'
 

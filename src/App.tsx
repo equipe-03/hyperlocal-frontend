@@ -1,14 +1,10 @@
-import { Category } from "./PAGES/category/category";
-import { Side } from "./COMPONENTS/sidebar/sidebar";
+import React from "react";
 
-function App() {
+export function App() {
   return (
-    <div>
-      < Category />
-      <Side />
+    <div className="app">
+      <h2>HyperLocal</h2>
     </div>
-
   );
 }
 
-export default App;
