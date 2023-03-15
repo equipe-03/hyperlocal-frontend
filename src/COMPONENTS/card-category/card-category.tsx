@@ -1,3 +1,4 @@
+import React from 'react';
 import { CategoryPayload } from '../../TYPES/category'
 import './card-category.css'
 
