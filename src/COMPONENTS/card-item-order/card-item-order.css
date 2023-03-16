@@ -1,0 +1,73 @@
+.card-item-order {
+    display: flex;
+    flex-direction: row;
+    width: 343px;
+    height: 136px;
+    border: 1px solid #E5E5E5;
+    gap: 10px;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    box-sizing: border-box;
+    background-color: #FFFDFD;
+    border-radius: 8px;
+}
+
+.img-card-item-order {
+    width: 120px;
+    height: 100%;
+    border-radius: 8px 0 0 8px;
+}
+
+.box-title-lixeira{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-item {
+    display: flex;
+    flex-direction: column;
+    width: 193px;
+    gap: 10px;
+    margin: 5px;
+}
+
+.title-card-item-order{
+    margin: 0 0 0 0;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 110%;
+    color: #211415;
+}
+
+.description-card-item-order {
+    width: 193px;
+    margin: 0 0 0 0;
+    font-size: 12px;
+    line-height: 130%;
+    color: #9D9797;
+}
+
+.preco-card-item-order{
+    margin: 0;
+    display: flex;
+    justify-content: left;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 110%;
+    color: #32CF52;
+}
+
+.box-preco-qtd {
+    display: flex;
+    justify-content: space-between;
+}
+
+.lixeira-card-item{
+    font-size: 1.3rem;
+    color: #CE3246;
+}
+
+.qtd-card-item{
+    font-size: 16px;
+    color: #9D9797;
+}
