@@ -1,0 +1,38 @@
+.footer-order {
+    width: 100vw;
+    height: 10vh;
+    background-color: #FFFDFD;
+}
+
+.box-total{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 20px 0 20px;
+}
+
+.button-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 38px;
+    font-size: 1.2rem;
+    background-color: #CE3246;
+    border-radius: 8px;
+    color: #FFFDFD;
+}
+
+.box-button {
+    display: flex;
+    justify-content: center;
+}
+
+.total {
+    font-size: 24px;
+    color: #9D9797;
+}
+
+.preco-total {
+    color: #32CF52;
+    font-size: 24px;
+}
