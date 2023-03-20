@@ -1,3 +1,4 @@
+import React from 'react';
 import { CategoryPayload } from '../../TYPES/category'
 import './card-category.css'
 
@@ -9,8 +10,8 @@ export function CardCategory({ category }: CardCategoryProps) {
 
     return (
         <>
-            <div className='category-container'>
-                <img className='img-category' src={category.image} alt="Imagem Categoria" />
+            <div className='category-card'>
+                <div className='icon-category'>{category.image}</div>
                 <div className='title-category'>{category.name}</div>
             </div>
         </>
