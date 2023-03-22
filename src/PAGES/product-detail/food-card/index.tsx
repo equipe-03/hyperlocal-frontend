@@ -27,9 +27,13 @@ const FoodCard: React.FC<FoodCardprops> = ({ extra }) => {
         <div className="foodprice">R${extra.price}</div>
       </div>
       <div className="cardquantity">
-        <button className="adicionar" onClick={aumentar}>+</button>
-        <div  >0</div>
-        <button className="diminuir" onClick={diminuir}>-</button>
+        <button className="adicionar" onClick={aumentar}>
+          +
+        </button>
+        <p className="número">{adicional}</p>
+        <button className="diminuir" onClick={diminuir}>
+          -
+        </button>
         <div>{quantity}</div>
       </div>
     </div>
