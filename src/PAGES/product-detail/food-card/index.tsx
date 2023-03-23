@@ -17,7 +17,9 @@ const FoodCard: React.FC<FoodCardprops> = ({ extra }) => {
   }
 
   function diminuir() {
-    setadicional(adicional - 1);
+    if (adicional > 0) {
+      setadicional(adicional - 1);
+    }
   }
 
   return (

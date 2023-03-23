@@ -49,7 +49,7 @@
   margin-top: 20px;
   padding: 10px 20px;
   border-radius: 8px;
-  background-color: #f44336;
+  background-color: #ce3246;
   color: white;
   font-size: 16px;
   font-weight: bold;
@@ -106,3 +106,47 @@
   padding: 10px;
   border-radius: 8px;
 }
+.cardinfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.cardquantity {
+  display: flex;
+  align-items: end;
+}
+
+.número {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* .card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+
+
+
+
+
+.cardquantity {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
+.número {
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: bold;
+}  */
