@@ -2,10 +2,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 70vh;
+    margin-top: 10px;
 }
 
 .category-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+}
+
+.category-h2 {
+    color: #B1AFAF;
 }

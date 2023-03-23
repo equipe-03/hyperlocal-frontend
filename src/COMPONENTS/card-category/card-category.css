@@ -1,8 +1,8 @@
 .category-card {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
     gap: 20px;
     box-sizing: border-box;
     width: 160px;
@@ -14,14 +14,12 @@
 }
 
 .img-category{
-    width: 54px;
-    height: 44.8px;
-    left: 53px;
-    top: 16.6px;
+   width: 56px;
+   height: 45px;
 }
 
 .title-category{
-    width: 65px;
+    width: fit-content;
     height: 22px;
     left: 47px;
     top: 82px;
