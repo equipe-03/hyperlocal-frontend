@@ -1,4 +1,5 @@
 export interface CategoryPayload {
-    image: JSX.Element;
+    id: string;
     name: string;
+    imgCategory: string;
 }
