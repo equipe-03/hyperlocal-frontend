@@ -1,4 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useState } from "react";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 interface Extra {
   name: string;
@@ -17,24 +19,28 @@ const FoodCard: React.FC<FoodCardprops> = ({ extra }) => {
   }
 
   function diminuir() {
-    setadicional(adicional - 1);
+    if (adicional > 0) {
+      setadicional(adicional - 1);
+    }
   }
 
   return (
-    <div className="card" key={extra.name}>
-      <div className="cardinfo">
-        <div className="foodname"> {extra.name}</div>
-        <div className="foodprice">R${extra.price}</div>
-      </div>
-      <div className="cardquantity">
-        <button className="adicionar" onClick={aumentar}>
-          +
-        </button>
-        <p className="número">{adicional}</p>
-        <button className="diminuir" onClick={diminuir}>
-          -
-        </button>
-        <div>{quantity}</div>
+    <div className="body">
+      <div className="card" key={extra.name}>
+        <div className="namepriceinfo">
+          <div className="foodname"> {extra.name}</div>
+          <div className="foodprice">R${extra.price}</div>
+        </div>
+        <div className="cardquantity">
+          <button className="diminuir" onClick={diminuir}>
+            <FontAwesomeIcon icon={faMinus} />
+          </button>
+          <p className="número">{adicional}</p>
+          <button className="adicionar" onClick={aumentar}>
+            <FontAwesomeIcon icon={faPlus} />
+          </button>
+          <div>{quantity}</div>
+        </div>
       </div>
     </div>
   );

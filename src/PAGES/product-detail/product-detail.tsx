@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import FoodCard from "./food-card";
 import "./product-detail.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const food = {
   name: "X-Salada",
@@ -9,30 +11,14 @@ const food = {
     "https://www.auau.com.br/image/cache/data/up_system/product-13697/TEXAS-BURGUER-1000x1000.jpg",
   price: 10,
   extras: [
-    { name: "Alface", price: 1.5 },
-    { name: "Bacon", price: 1 },
+    { name: "Alface", price: 2 },
+    { name: "Bacon", price: 1.0 },
   ],
 };
 const FoodScreen = () => {
   const [selectedExtras, setSelectedExtras] = useState<boolean[]>(
     new Array(food.extras.length).fill(false)
   );
-
-  const toggleExtra = (index: number) => {
-    const newSelectedExtras = [...selectedExtras];
-    newSelectedExtras[index] = !newSelectedExtras[index];
-    setSelectedExtras(newSelectedExtras);
-  };
-
-  const calculateTotal = () => {
-    let total = food.price;
-    selectedExtras.forEach((selected, index) => {
-      if (selected) {
-        total += food.extras[index].price;
-      }
-    });
-    return total;
-  };
 
   return (
     <div className="body">
@@ -49,8 +35,20 @@ const FoodScreen = () => {
           <FoodCard key={index} extra={extra} />
         ))}
       </div>
-      <div className="add">
-        <button className="adicionar">Adicionar R${calculateTotal()}</button>
+      <div className="footer-product">
+        <div className="qtd-adc">
+          <div>
+            <FontAwesomeIcon icon={faMinus} />
+          </div>
+          <div className="qtd">0</div>
+          <div>
+            <FontAwesomeIcon icon={faPlus} />
+          </div>
+        </div>
+        <div className="btn-adc">
+          <div>Adicionar</div>
+          <div>R$ 0,00</div>
+        </div>
       </div>
     </div>
   );
