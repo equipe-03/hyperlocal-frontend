@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { FooterProduct } from "../../COMPONENTS/footer-product/footer-product";
 import FoodCard from "./food-card";
 import "./product-detail.css";
 
@@ -60,6 +61,7 @@ export default function App() {
   return (
     <div className="App">
       <FoodScreen />
+      <FooterProduct />
     </div>
   );
 }

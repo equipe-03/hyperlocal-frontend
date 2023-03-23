@@ -15,5 +15,16 @@ export const api = {
         } catch (err) {
             alert(err)
         }
-    }
+    },
+
+    // PRATOS
+
+    getDish: async () => {
+        try {
+            const response = await axios.get("/dish/find")
+            return response.data;
+        } catch (err) {
+            alert(err)
+        }
+    },
 }

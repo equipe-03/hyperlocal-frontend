@@ -7,12 +7,14 @@ import ItensCategory from "./PAGES/itens-category/itens-category";
 import Order from "./PAGES/order/order";
 import App from "./PAGES/product-detail/product-detail";
 import Teste from "./COMPONENTS/table/teste";
+import GlobalContext from "./context";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
+    <GlobalContext>
     <BrowserRouter>
       <Routes>
         <Route path="/categorys" element={<Category />} />
@@ -24,5 +26,6 @@ root.render(
         <Route path="/order" element={<Order />} />
       </Routes>
     </BrowserRouter>
+    </GlobalContext>
   </React.StrictMode>
 );
