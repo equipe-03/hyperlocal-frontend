@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import { ItemPayload } from '../../TYPES/item'
 import './card-item.css'
 
@@ -8,8 +9,10 @@ interface CardItemProps {
 
 export function CardItem({ item }: CardItemProps) {
   
+  const navigate = useNavigate()
+
   return (
-    <div className="card-item">
+    <div className="card-item" onClick={() => navigate('/product')}>
         <img className='img-card-item' src={item.image} alt="Foto do Prato" />
         <div className="information">
             <h2 className='title-card-item'>{item.title}</h2>

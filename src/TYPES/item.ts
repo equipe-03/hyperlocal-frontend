@@ -1,5 +1,5 @@
 export interface ItemPayload {
-    id?: string;
+    id: string;
     image: string;
     title: string;
     description: string;
