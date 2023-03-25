@@ -1,33 +1,27 @@
 import './category.css'
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from "react"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBurger, faChampagneGlasses, faCookieBite, faPizzaSlice } from '@fortawesome/free-solid-svg-icons'
 import { CardCategory } from "../../COMPONENTS/card-category/card-category"
 import { CategoryPayload } from "../../TYPES/category"
 import { Header } from '../../COMPONENTS/header/header'
 import { FooterHome } from '../../COMPONENTS/footer-home/footer-home'
+import { useNavigate } from 'react-router-dom';
+import { api } from '../../API/api';
 
 
 export function Category() {
-    const categoria = [{
-        image: < FontAwesomeIcon icon={faBurger}/>,
-        name: 'Burguers'
-    },
-    {
-        image: < FontAwesomeIcon icon={faChampagneGlasses}/>,
-        name: 'Bebidas'
-    },
-    {
-        image: < FontAwesomeIcon icon={faCookieBite}/>,
-        name: 'Sobremesas'
-    },
-    {
-        image: < FontAwesomeIcon icon={faPizzaSlice}/>,
-        name: 'Pizzas'
-    }]
+    const [categoryList, setCategoryList] = useState<CategoryPayload[]>([])
 
-    const [categoryList, setCategoryList] = useState<CategoryPayload[]>(categoria)
+    const navigate = useNavigate()
+
+    async function AllCategorys() {
+        const categorias = await api.getCategory()
+        setCategoryList(categorias)
+    }
+
+    useEffect(() => {
+        AllCategorys();
+      }, [])
 
     return (
         <>
@@ -35,7 +29,7 @@ export function Category() {
         <div className="categorys">
             <h2 className='category-h2'>CATEGORIAS</h2>
             <div className="category-container">{categoryList.map((item) => (
-                <CardCategory category={item} />  
+                <CardCategory key= {item.id} category={item} />  
             ))}</div>
         </div>
         < FooterHome />
