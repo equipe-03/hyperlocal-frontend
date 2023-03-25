@@ -1,5 +1,5 @@
 export interface AdicionalPayload {
-    id?: string;
+    id: string;
     nome: string;
-    preco: string;
+    preco: number;
 }
