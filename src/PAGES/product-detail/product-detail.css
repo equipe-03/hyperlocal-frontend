@@ -1,180 +1,42 @@
-.body {
-  padding: 0;
-  margin: 0;
-  min-height: 100%;
-  height: 100%;
-  width: 100%;
-  max-width: 100%;
+.detalhe-produto {
+    min-height: 90vh;
+    width: 100vw;
 }
 
-.card {
-  display: flex;
-  flex-direction: inherit;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px;
-  border: 1px solid #e5e5e5;
-  border-radius: 8px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-  margin-top: 35px;
+.img-detalhe-produto {
+    width: 100vw;
+    height: 240px;
 }
 
-.card img {
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 10px;
+.titulo-detalhe-produto {
+    font-size: 32px;
+    color: #211415;
+    margin: 10px 15px 0 15px;
 }
 
-.card h2 {
-  margin: 0;
-  font-size: 24px;
-  font-weight: bold;
-  text-align: center;
+.preco-detalhe-produto {
+    font-size: 16px;
+    color: #9D9797;
+    margin: 0 15px 0 15px;
 }
 
-.card h3 {
-  margin: 10px 0;
-  font-size: 20px;
-  font-weight: bold;
-  text-align: center;
+.descricao-detalhe-produto {
+    font-size: 18px;
+    color: #9D9797;
+    margin: 10px 15px 0 15px;
 }
 
-.card label {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
+.titulo-adicionais {
+    font-size: 20px;
+    color: #9D9797;
+    margin: 10px 15px 0 15px;
 }
 
-.card input[type="checkbox"] {
-  margin-right: 10px;
-}
-
-.card button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  background-color: #ce3246;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-}
-
-.image {
-  width: 100%;
-  height: 240px;
-}
-
-.input {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.food-screen {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  max-width: 100vw;
-  width: 100vw;
-}
-
-.titulo {
-  font-weight: 600;
-  font-family: "lato";
-  font-style: normal;
-  font-size: 32px;
-  line-height: 100%;
-}
-
-.add {
-  display: flex;
-  max-width: 100vw;
-  width: 100vw;
-  justify-content: end;
-}
-.adicionar {
-  color: #e5e5e5;
-  background: #ce3246;
-  margin-top: 24px;
-  font-size: 24px;
-  padding: 10px;
-  border-radius: 8px;
-}
-.namepriceinfo {
-  display: flex;
-  flex-direction: column;
-  margin: 5px 0;
-  justify-content: end;
-}
-
-.cardquantity {
-  display: flex;
-  align-items: baseline;
-  max-width: 100%;
-}
-
-.número {
-  margin: 0 10px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.footer-product {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #e5e5e5;
-  width: 100vw;
-  background-color: #fffdfd;
-}
-
-.qtd-adc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-right: 15px;
-  color: #ce3246;
-  width: 111px;
-  height: 48px;
-  border: 1px solid #ce3246;
-  border-radius: 8px;
-  margin-left: 15px;
-}
-
-.qtd {
-  color: #211415;
-  font-size: 20px;
-}
-
-.btn-adc {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  width: 216px;
-  height: 48px;
-  background-color: #ce3246;
-  border-radius: 8px;
-  color: #fffdfd;
-  font-size: 16px;
-  margin-right: 15px;
-}
-
-.subtitulo {
-  width: 100%;
-  height: 50px;
-  max-width: 100%;
-  margin-top: 20px;
-}
-
-.adicionais {
-  width: 343px;
-  height: 22px;
-  left: 16px;
-  margin-top: 20px;
+.adicionais-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin: 10px 0 15px 0;
 }
