@@ -6,7 +6,7 @@ import './footer-product.css'
 export function FooterProduct() {
   return (
     <div className='footer-product'>
-        <div className='qtd-adc'>
+        <div className='quant-adc'>
             <div>< FontAwesomeIcon icon={faMinus}/></div>
             <div className='qtd'>0</div>
             <div>< FontAwesomeIcon icon={faPlus}/></div>

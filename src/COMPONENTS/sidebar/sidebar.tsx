@@ -36,7 +36,7 @@ import { body, sidebar, toggle, searchBtn, modeSwitch, modeText } from '../../TY
    
     return (
       
-    <body ref={body}>
+    <body className='body-side' ref={body}>
     <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'></link>
     
     <nav ref={sidebar} className="sidebar close">
