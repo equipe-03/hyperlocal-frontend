@@ -1,0 +1,45 @@
+.card-order {
+    height: 94px;
+    width: 343px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    background-color: #FFFDFD;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-pedido-card-order {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.titulo-pedido {
+    font-size: 24px;
+    color: #211415;
+}
+
+.qtd-pedido {
+    font-size: 16px;
+    color: #9D9797;
+}
+
+.container-total-pedido {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 10px;
+}
+
+.total-card-pedido {
+    font-size: 18px;
+    color: #9D9797;
+}
+
+.vl-total-pedido {
+    font-size: 18px;
+    color: #32CF52;
+}
