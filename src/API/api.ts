@@ -1,6 +1,5 @@
 import axios from "axios";
 import swal from "sweetalert";
-import { Category } from "../PAGES/category/category";
 import { CategoryPayload } from "../TYPES/category";
 import { DishPayload } from "../TYPES/dish";
 import { IngredientPayload } from "../TYPES/ingredient";
