@@ -9,6 +9,7 @@ import Teste from "./COMPONENTS/table/teste";
 import GlobalContext from "./context";
 import ProductDetail from "./PAGES/product-detail/product-detail";
 import Side from "./COMPONENTS/sidebar/sidebar";
+import { Confirmation } from "./PAGES/confirmation/confirmation";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -26,6 +27,7 @@ root.render(
         <Route path="/order" element={<Order />} />
         <Route path="/product" element={<ProductDetail />} />
         <Route path="/side" element={<Side />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
     </GlobalContext>
