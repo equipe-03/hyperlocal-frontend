@@ -10,6 +10,7 @@ import GlobalContext from "./context";
 import ProductDetail from "./PAGES/product-detail/product-detail";
 import Side from "./COMPONENTS/sidebar/sidebar";
 import { Confirmation } from "./PAGES/confirmation/confirmation";
+import BtnGarcom from "./COMPONENTS/btn-garcom/btn-garcom";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
