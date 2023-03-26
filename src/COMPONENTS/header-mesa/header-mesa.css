@@ -1,0 +1,20 @@
+.header-mesa {
+    height: 15vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #CE3246;
+}
+
+.btn-arrow {
+    margin-left: 20px;
+    font-size: 30px;
+    color: #FFFDFD;
+}
+
+.mesa {
+    font-size: 24px;
+    color: #FFFDFD;
+    margin-right: 20px;
+}
