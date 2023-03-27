@@ -1,0 +1,32 @@
+.home{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px 10px;
+    flex-direction: row;
+    background-color:transparent;
+}
+.card-home {
+    height: 94px;
+    width: 150px;
+    border: 1px solid #E5E5E5;
+    box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    background-color: #FFFDFD;
+    display: flex;
+    justify-content: center;
+    border-color: #ce3246;
+    margin: 10px 10px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container-pedido-card-home {
+    display: flex;
+    align-items: center;
+    margin: 5px 10px;
+    font-size: 25px;
+    color:#ce3246 ;
+
+}
+
