@@ -1,4 +1,4 @@
 export interface TablePayload {
-  id: string;
+  id?: string;
   number: number;
 }
