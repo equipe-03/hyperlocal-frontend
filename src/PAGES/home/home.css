@@ -1,23 +1,27 @@
-.page-order {
-    background-color: #FFFDFD;;
+.home-content{
+    align-items: center;
+    justify-content: center;
 }
-
-.btn-adicionar-mais {
-    height: 48px;
-    width: 343px;
-    border: 1px solid #CE3246;
-    border-radius: 8px;
-    font-size: 16px;
-    color: #211415;;
-    background-color: #FFFDFD;
+.home-table {
+    background-color: transparent;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 10px;
 }
 
-.itens-adc {
+.home-container {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 20px;
+    color: #ce3246;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.home-h2 {
+    color: #ce3246;
     align-items: center;
-    gap: 5px;
-    min-height: 70vh;
-    margin-top: 45px;
+    justify-content: center;
+    display: flex;
 }

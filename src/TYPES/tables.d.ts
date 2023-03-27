@@ -1,4 +1,4 @@
-export type TablePayload = {
+export type TablesPayload = {
   id?: string;
   number: number;
 };

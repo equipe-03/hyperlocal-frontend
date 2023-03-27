@@ -6,7 +6,9 @@ type Props = {
 export function HomeItem({ number }: Props) {
   return (
     <div className="table">
-      <h2>{number}</h2>
+      <div className="table-item">
+        <h2>{number}</h2>
+      </div>
     </div>
   );
 }
