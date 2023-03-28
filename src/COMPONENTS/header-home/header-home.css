@@ -1,0 +1,48 @@
+.header {
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  padding: 0px 16px 0px 16px;
+  flex-direction: column;
+  display: flex;
+  height: 20vh;
+  background: #ce3246;
+}
+.title {
+  display: flex;
+  color: #fbebed;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 110%;
+  text-align: center;
+}
+
+.title2 {
+  color: #fffdfd;
+  width: 100%;
+  margin: 8px 0px 0px;
+  padding: 0px;
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 110%;
+}
+
+
+
+.search {
+  text-align: center;
+  position: absolute;
+  width: calc(100% - 80px);
+  bottom: -28px;
+  height: 10px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  color: #ce3246;
+}

@@ -12,7 +12,6 @@ import Side from "./COMPONENTS/sidebar/sidebar";
 import { Confirmation } from "./PAGES/confirmation/confirmation";
 import { Test4 } from "./PAGES/teste/teste";
 
-
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
 );
