@@ -1,5 +1,5 @@
 export interface IngredientPayload {
-  id: string;
+  id?: string;
   name: string;
   status: string;
 }
