@@ -2,10 +2,6 @@ import './sidebar.css'
 import { useRef, useState } from 'react';
 import React, { useEffect } from "react";
 import './sidebar'
-import { body, sidebar, toggle, searchBtn, modeSwitch, modeText } from '../../TYPES/sidebar';
-
- 
-
 
    export const Side = () => {
  const body = useRef({}as HTMLBodyElement) 
@@ -58,51 +54,40 @@ import { body, sidebar, toggle, searchBtn, modeSwitch, modeText } from '../../TY
         <div className="menu-bar">
             <div className="menu">
 
-                <li onClick={removeSearch} ref={searchBtn} className="search-box">
-                    <i className='bx bx-search icon'></i>
-                    <input type="text" placeholder="Search..."></input>
-                </li>
-
                 <ul className="menu-links">
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-home-alt icon' ></i>
-                            <span className="text nav-text">Dashboard</span>
+                            <span className="text nav-text">Ingredientes</span>
                         </a>
                     </li>
 
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-bar-chart-alt-2 icon' ></i>
-                            <span className="text nav-text">Revenue</span>
+                            <span className="text nav-text">Mesas</span>
                         </a>
                     </li>
 
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-bell icon'></i>
-                            <span className="text nav-text">Notifications</span>
+                            <span className="text nav-text">Pratos</span>
                         </a>
                     </li>
 
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-pie-chart-alt icon' ></i>
-                            <span className="text nav-text">Analytics</span>
+                            <span className="text nav-text">Categorias</span>
                         </a>
                     </li>
 
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-heart icon' ></i>
-                            <span className="text nav-text">Likes</span>
+                            <span className="text nav-text">Usuários</span>
                         </a>
                     </li>
 
                     <li className="nav-link">
                         <a href="#">
-                            <i className='bx bx-wallet icon' ></i>
-                            <span className="text nav-text">Wallets</span>
+                            <span className="text nav-text">Pedidos</span>
                         </a>
                     </li>
 
@@ -136,7 +121,7 @@ import { body, sidebar, toggle, searchBtn, modeSwitch, modeText } from '../../TY
     
 
     <section className="home">
-        <div className="text">Hyperlocal</div>
+        <div className="text">Chef-Hub</div>
     </section>
     
     </body>
