@@ -7,7 +7,7 @@ import { OrderPayload } from "../TYPES/order";
 import { TablePayload } from "../TYPES/table";
 import { UserPayload } from "../TYPES/user";
 
-axios.defaults.baseURL = "http://localhost:3333";
+axios.defaults.baseURL = "https://hyperlocal-backend-production.up.railway.app";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 function handleError(text: string, description: string) {
