@@ -5,6 +5,7 @@ import { DishPayload } from "../TYPES/dish";
 import { IngredientPayload } from "../TYPES/ingredient";
 import { OrderPayload } from "../TYPES/order";
 import { TablePayload } from "../TYPES/table";
+import { ProductPayload } from "../TYPES/tables";
 import { UserPayload } from "../TYPES/user";
 
 axios.defaults.baseURL = "https://hyperlocal-backend-production.up.railway.app";
@@ -167,15 +168,28 @@ export const api = {
     }
   },
 
-  getDishById: async (dishId: string): Promise<DishPayload | undefined> => {
+  getDishById: async (dishId: string): Promise<ProductPayload> => {
     try {
       const dishid = await axios.get("/dish/find/" + dishId);
+      if (!dishid) {
+        throw new Error("Prato não encontrado");
+      }
       return dishid.data;
     } catch (err) {
       handleError(
         "Prato não foi encontrado",
         "Não há um prato com este id no servidor "
       );
+      return {
+        id: "",
+        name: "",
+        description: "",
+        price: 0,
+        imgDish: "",
+        ingredients: [],
+        categoryId: "",
+        status: "",
+      };
     }
   },
 

@@ -1,49 +1,81 @@
-import React, { useState } from 'react'
-import { useParams } from 'react-router-dom';
-import { CarAdicional } from '../../COMPONENTS/card-adicional/card-adicional';
-import { FooterProduct } from '../../COMPONENTS/footer-product/footer-product'
-import { AdicionalPayload } from '../../TYPES/adicional';
-import './product-detail.css'
-
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import { api } from "../../API/api";
+import { CarAdicional } from "../../COMPONENTS/card-adicional/card-adicional";
+import { FooterProduct } from "../../COMPONENTS/footer-product/footer-product";
+import { AdicionalPayload } from "../../TYPES/adicional";
+import { ProductPayload } from "../../TYPES/tables";
+import "./product-detail.css";
 
 export default function ProductDetail() {
-    const { id } = useParams()
-    
-    const adds = [{
-        id: 'ASSDAS1232344',
-        nome: 'Bacon',
-        preco: 3
+  const params = useParams();
+  const [product, setProduct] = useState<ProductPayload>({
+    name: "",
+    description: "",
+    price: 0,
+    imgDish: "",
+    categoryId: "",
+    id: "",
+    ingredients: [],
+    status: "",
+  });
+  useEffect(() => {
+    async function LoadProductById() {
+      const response = await api.getDishById(params.id as string);
+      setProduct({
+        name: response.name,
+        description: response.description,
+        price: response.price,
+        imgDish: response.imgDish,
+        categoryId: response.categoryId,
+        id: response.id,
+        status: response.status,
+        ingredients: response.ingredients,
+      });
+      console.log(response);
+    }
+    LoadProductById();
+  }, []);
+
+  const adds = [
+    {
+      id: "ASSDAS1232344",
+      nome: "Bacon",
+      preco: 3,
     },
     {
-        id: 'ASSDAS12323',
-        nome: 'Ovo',
-        preco: 2
+      id: "ASSDAS12323",
+      nome: "Ovo",
+      preco: 2,
     },
     {
-        id: 'ASSDAS2132',
-        nome: 'Molho',
-        preco: 2
-    }]
+      id: "ASSDAS2132",
+      nome: "Molho",
+      preco: 2,
+    },
+  ];
 
-    const [adcList, setAdcList] = useState<AdicionalPayload[]>(adds)
+  const [adcList, setAdcList] = useState<AdicionalPayload[]>(adds);
 
-
-
-    return (
-        <>
-            <div className='detalhe-produto'>
-                <img className='img-detalhe-produto' src="https://saopaulosecreto.com/wp-content/uploads/2022/10/Get-Burger-1024x683.jpg" alt="imagem do produto" />
-                <h2 className='titulo-detalhe-produto'>Duplo Buguer</h2>
-                <div className='preco-detalhe-produto'>A partir de R$20,00</div>
-                <div className='descricao-detalhe-produto'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam provident quidem quam nobis libero optio quis! Hic omnis aspernatur corrupti unde beatae voluptas ratione, blanditiis quam, impedit velit quis exercitationem.</div>
-                <div className='titulo-adicionais'>Adicionais</div>
-                <div className='adicionais-container'>
-                    {adcList.map((adc) => (
-                        <CarAdicional key={adc.id} adicional={adc}/>
-                    ))}
-                </div>
-            </div>
-            <FooterProduct />
-        </>
-    )
+  return (
+    <>
+      <div className="detalhe-produto">
+        <img
+          className="img-detalhe-produto"
+          src={product.imgDish}
+          alt="imagem do produto"
+        />
+        <h2 className="titulo-detalhe-produto">{product.name}</h2>
+        <div className="preco-detalhe-produto">R${product.price}</div>
+        <div className="descricao-detalhe-produto">{product.description}</div>
+        <div className="titulo-adicionais">Adicionais</div>
+        <div className="adicionais-container">
+          {adcList.map((adc) => (
+            <CarAdicional key={adc.id} adicional={adc} />
+          ))}
+        </div>
+      </div>
+      <FooterProduct />
+    </>
+  );
 }

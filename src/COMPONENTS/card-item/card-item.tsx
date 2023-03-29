@@ -18,7 +18,7 @@ export function CardItem({
   const navigate = useNavigate();
 
   return (
-    <div className="card-item" onClick={() => navigate("/rota" + id)}>
+    <div className="card-item" onClick={() => navigate("/product/" + id)}>
       {/* // <div className="card-item" onClick={console.log(`${title}`)}> */}
       <img className="img-card-item" src={imgDish} alt="Foto do Prato" />
       <div className="information">

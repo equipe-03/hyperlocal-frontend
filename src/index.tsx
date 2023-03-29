@@ -10,7 +10,7 @@ import GlobalContext from "./context";
 import ProductDetail from "./PAGES/product-detail/product-detail";
 import Side from "./COMPONENTS/sidebar/sidebar";
 import { Confirmation } from "./PAGES/confirmation/confirmation";
-import { Test4 } from "./PAGES/teste/teste";
+
 import Home from "./PAGES/home/home";
 
 const root = ReactDOM.createRoot(
@@ -28,10 +28,9 @@ root.render(
           <Route path="/categorys" element={<Category />} />
           <Route path="/itens-category/:id" element={<ItensCategory />} />
           <Route path="/order" element={<Order />} />
-          <Route path="/product" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/side" element={<Side />} />
           <Route path="/confirmation" element={<Confirmation />} />
-          <Route path="/teste" element={<Test4 />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext>

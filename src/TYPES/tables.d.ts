@@ -10,3 +10,14 @@ export type ItensPayload = {
   description: string;
   price: number;
 };
+
+export type ProductPayload = {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  imgDish: string;
+  categoryId: string;
+  ingredients: [];
+  status: string;
+};
