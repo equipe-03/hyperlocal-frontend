@@ -9,22 +9,31 @@
 .cardapio {
     display: flex;
     align-items: center;
-    width: 50%;
+    width: 10px;
     height: 100%;
     gap: 5px;
     margin-left: 25px; 
     font-size: 1.5rem;
     color: #B1AFAF;
+    cursor: pointer;
+    
+}
+.cardapio:hover {
+    color: #ce3246;
 }
 
 .pedido {
     display: flex;
     justify-content: right;
     align-items: center;
-    width: 50%;
+    width: 10px;
     height: 100%;
     gap: 5px;
     margin-right: 25px; 
     font-size: 1.5rem;
     color: #B1AFAF;
+    cursor: pointer;
+}
+.pedido:hover {
+    color: #ce3246;
 }
