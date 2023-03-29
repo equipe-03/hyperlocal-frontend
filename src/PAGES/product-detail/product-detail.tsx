@@ -66,7 +66,7 @@ export default function ProductDetail() {
           alt="imagem do produto"
         />
         <h2 className="titulo-detalhe-produto">{product.name}</h2>
-        <div className="preco-detalhe-produto">R${product.price}</div>
+        <div className="preco-detalhe-produto">R$ {product.price}</div>
         <div className="descricao-detalhe-produto">{product.description}</div>
         <div className="titulo-adicionais">Adicionais</div>
         <div className="adicionais-container">
