@@ -13,7 +13,6 @@ export function ListaMesa({ lista }: ListaMesaProps) {
             <div className='container-name-buttons'>
                 <div className='nome-lista'>Mesa {lista.number}</div>
                 <div className='container-buttons'>
-                    <button> <FontAwesomeIcon icon={faPencil} /> </button>
                     <button> <FontAwesomeIcon icon={faTrash} /> </button>
                 </div>
             </div>
