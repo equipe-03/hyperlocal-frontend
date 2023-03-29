@@ -8,12 +8,14 @@ import Order from "./PAGES/order/order";
 import GlobalContext from "./context";
 import ProductDetail from "./PAGES/product-detail/product-detail";
 import Side from "./COMPONENTS/sidebar/sidebar";
-
+import Home from "./PAGES/home/home";
+import CreateCategory from "./COMPONENTS/create-form-category/create-form-category";
 import "./index.css";
 import { AdminHome } from "./PAGES/admin-home/admin-home";
 import { AdminIngredient } from "./PAGES/admin-ingredient/admin-ingredient";
 import { AdminCategory } from "./PAGES/admin-category/admin-category";
 import { AdminPratos } from "./PAGES/admin-pratos/admin-pratos";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -27,6 +29,7 @@ root.render(
         <Route path="/itens" element={< ItensCategory />} />
         <Route path="/categorys" element={< Category />} />
         <Route path="/itens-category" element={< ItensCategory />} />
+        <Route path="/category/create" element={<CreateCategory />} />
         <Route path="/order" element={< Order />} />
         <Route path="/product" element={< ProductDetail />} />
         <Route path="/side" element={< Side />} />
@@ -37,6 +40,7 @@ root.render(
         <Route path="/adminDish" element={< AdminPratos />} />
       </Routes>
     </BrowserRouter>
+
 
     </GlobalContext>
   </React.StrictMode>
