@@ -12,6 +12,8 @@ import Side from "./COMPONENTS/sidebar/sidebar";
 import { Confirmation } from "./PAGES/confirmation/confirmation";
 import { Test4 } from "./PAGES/teste/teste";
 import Home from "./PAGES/home/home";
+import CreateCategory from "./COMPONENTS/create-form-category/create-form-category";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -25,7 +27,7 @@ root.render(
           <Route path="/categorys" element={<Category />} />
           <Route path="/itens" element={<ItensCategory />} />
           <Route path="/table" element={<Teste />} />
-          <Route path="/categorys" element={<Category />} />
+          <Route path="/category/create" element={<CreateCategory />} />
           <Route path="/itens-category" element={<ItensCategory />} />
           <Route path="/order" element={<Order />} />
           <Route path="/product" element={<ProductDetail />} />
