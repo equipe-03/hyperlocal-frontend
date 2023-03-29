@@ -17,14 +17,14 @@ export function AdminCategory() {
       }, []);
 
     return (
-    <div className='admin-category'>
+    <div className='admin-ingredient'>
         <h2>Categorias</h2>
-        <div>
+        <div className='list-container'>
             {categoryList?.map((categoria) => (
                 <ListaCategoria key={categoria.id} lista={categoria}/>
             ))}
         </div>
-        <button>Nova Categoria</button>
+        <button className='btn-new'>Nova Categoria</button>
     </div>
   )
 }
