@@ -2,13 +2,13 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../API/api";
-import { ListIngradientes } from "../../COMPONENTS/lista-ingredientes/lista-ingredientes";
 import { DishPayload } from "../../TYPES/dish";
 
 export function CreateDish() {
   const navigate = useNavigate();
   const [dishs, setDish] = useState<DishPayload>();
   const { id } = useParams();
+  const { ingredientId } = useParams();
 
   useEffect(() => {
     getDishById();
@@ -30,12 +30,14 @@ export function CreateDish() {
       name: formData.get("name")?.toString() || "",
       status: formData.get("status")?.toString() || "",
       imgDish: formData.get("img")?.toString() || "",
+      categoryId: id,
+      ingredientId: ingredientId,
     };
 
     let dishResponse;
     if (id) {
-      const ingredientToUpdate = { ...newDish, id: id };
-      dishResponse = await api.patchIngredient(ingredientToUpdate);
+      const dishToUpdate = { ...newDish, id: id };
+      dishResponse = await api.patchIngredient(dishToUpdate);
     } else {
       dishResponse = await api.postIngredient(newDish);
     }
@@ -48,31 +50,27 @@ export function CreateDish() {
   return (
     <div className="body">
       <form className="formulario" onSubmit={handleSubmit}>
-        {id ? "Atualizar ingrediente" : "Criar novo ingrediente"}
+        {id ? "Atualizar prato" : "Criar novo prato"}
         <div className="input">
           <input
             defaultValue={dishs?.name}
             type="text"
             required
             name="name"
-            placeholder="Digite o ingrediente"
+            placeholder="Digite o nome do prato"
           />
         </div>
         <div className="input">
-          <input
-            defaultValue={dishs?.status}
-            type="text"
-            name="status"
-            required
-            placeholder="Digite o status"
-          />
+          <select name="status" defaultValue={dishs?.status} required>
+            <option value="Active">Ativo</option>
+            <option value="Inactive">Inativo</option>
+          </select>
         </div>
         <div className="input">
           <input
             defaultValue={dishs?.imgDish}
             type="text"
             name="image"
-            required
             placeholder="Link da Foto"
           />
         </div>
