@@ -1,40 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { api } from '../../API/api'
 import { ListaUser } from '../../COMPONENTS/lista-user/lista-user'
 import { UserPayload } from '../../TYPES/user'
 
 export function AdminUsers() {
 
-    const Moc = [{
-        id: "123123qqqq",
-        name: "User",
-        email: "asdakbd@snbasbvdhvas",
-        password: "sjbhavsdjvas"
-    },
-    {
-        id: "123123weqw",
-        name: "User",
-        email: "asdakbd@snbasbvdhvas",
-        password: "sjbhavsdjvas"
-    },
-    {
-        id: "123123wewqe",
-        name: "User",
-        email: "asdakbd@snbasbvdhvas",
-        password: "sjbhavsdjvas"
-    },
-    {
-        id: "123123",
-        name: "User",
-        email: "asdakbd@snbasbvdhvas",
-        password: "sjbhavsdjvas"
-    }]
+    const [userList, setUserList] = useState<UserPayload[] | undefined>()
 
-    const [userList, setUserList] = useState<UserPayload[]>(Moc)
+    async function AllUsers () {
+        const users = await api.getUser();
+        setUserList(users)
+    }
+
+    useEffect(() => {
+        AllUsers();
+      }, []);
 
     return (
         <div className='admin-users'>
             <div>
-                {userList.map((usuario) => (
+                {userList?.map((usuario) => (
                     <ListaUser lista={usuario} />
                 ))}
             </div>

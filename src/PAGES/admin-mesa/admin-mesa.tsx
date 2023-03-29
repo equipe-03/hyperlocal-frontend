@@ -1,32 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { api } from '../../API/api'
 import { ListaMesa } from '../../COMPONENTS/lista-mesas/lista-mesa'
 import { TablePayload } from '../../TYPES/table'
 
 export function AdminMesas() {
 
-    const Moc = [{
-        id: "iqwejb",
-        number: 1,
-    },
-    {
-        id: "iqwejb123213",
-        number: 1,
-    },
-    {
-        id: "iqwejb122",
-        number: 1,
-    },
-    {
-        id: "iqwejb234566",
-        number: 1,
-    }]
+    const [tableList, setTableList] = useState<TablePayload[] | undefined>([])
 
-    const [tableList, setTableList] = useState<TablePayload[]>(Moc)
+    async function AllTables() {
+        const tables = await api.getTable();
+        setTableList(tables)
+    }
+
+    useEffect(() => {
+        AllTables();
+      }, []);
 
     return (
         <div className='admin-mesa'>
             <div>
-                {tableList.map((mesa) => (
+                {tableList?.map((mesa) => (
                     <ListaMesa key={mesa.id} lista={mesa} />
                 ))}
             </div>

@@ -1,35 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { api } from '../../API/api'
 import { ListIngradientes } from '../../COMPONENTS/lista-ingredientes/lista-ingredientes'
 import { IngredientPayload } from '../../TYPES/ingredient'
 
 export function AdminIngredient() {
-    const ingredientMoc = [{
-        id: "sndjahsd1923908",
-        name: "Pão",
-        status: "Active"
-    },
-    {
-        id: "sndjahsd1923908",
-        name: "Carne",
-        status: "Active"
-    },
-    {
-        id: "sndjahsd1923908",
-        name: "Queijo",
-        status: "Active"
-    },
-    {
-        id: "sndjahsd1923908",
-        name: "Calabresa",
-        status: "Inactive"
-    }]
 
-    const [ingredientList, setIngredientList] = useState<IngredientPayload[]>(ingredientMoc)
+    const [ingredientList, setIngredientList] = useState<IngredientPayload[] | undefined>()
     
+    async function AllIngredients() {
+        const ingredients = await api.getIngredient();
+        setIngredientList(ingredients)
+    }
+
+    useEffect(() => {
+        AllIngredients();
+      }, []);
+
     return (
         <div className='admin-ingredient'>
             <div>
-                {ingredientList.map((ingrediente) => (
+                {ingredientList?.map((ingrediente) => (
                     <ListIngradientes key={ingrediente.id} lista={ingrediente}/>
                 ))}
             </div>
