@@ -58,7 +58,7 @@ export const api = {
       return newIngredient.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o ingrediente", err.response.data.message[0]);
+      handleError("Erro ao criar o ingrediente", err.response.data.message);
     }
   },
 
@@ -75,7 +75,7 @@ export const api = {
       );
       return updateIngredient.data;
     } catch (err: any) {
-      handleError("Erro ao editar o ingrediente", err.response.data.message[0]);
+      handleError("Erro ao editar o ingrediente", err.response.data.message);
     }
   },
 
@@ -133,7 +133,7 @@ export const api = {
       return newTable.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o tabela", err.response.data.message[0]);
+      handleError("Erro ao criar o tabela", err.response.data.message);
     }
   },
 
@@ -187,7 +187,7 @@ export const api = {
       return newDish.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o prato", err.response.data.message[0]);
+      handleError("Erro ao criar o prato", err.response.data.message);
     }
   },
 
@@ -198,7 +198,7 @@ export const api = {
       });
       return updateDish.data;
     } catch (err: any) {
-      handleError("Erro ao editar o prato", err.response.data.message[0]);
+      handleError("Erro ao editar o prato", err.response.data.message);
     }
   },
 
@@ -255,7 +255,7 @@ export const api = {
       return newCategory.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar categoria", err.response.data.message[0]);
+      handleError("Erro ao criar categoria", err.response.data.message);
     }
   },
 
@@ -268,7 +268,7 @@ export const api = {
       });
       return updateCategory.data;
     } catch (err: any) {
-      handleError("Erro ao editar categoria", err.response.data.message[0]);
+      handleError("Erro ao editar categoria", err.response.data.message);
     }
   },
 
@@ -327,7 +327,7 @@ export const api = {
       return newUser.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar usuário", err.response.data.message[0]);
+      handleError("Erro ao criar usuário", err.response.data.message);
     }
   },
 
@@ -338,7 +338,7 @@ export const api = {
       });
       return updateUser.data;
     } catch (err: any) {
-      handleError("Erro ao editar usuário", err.response.data.message[0]);
+      handleError("Erro ao editar usuário", err.response.data.message);
     }
   },
   deleteUser: async (userId: string): Promise<boolean | undefined> => {
@@ -393,7 +393,7 @@ export const api = {
       return newOrder.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar pedido", err.response.data.message[0]);
+      handleError("Erro ao criar pedido", err.response.data.message);
     }
   },
 
@@ -404,7 +404,7 @@ export const api = {
       });
       return updateOrder.data;
     } catch (err: any) {
-      handleError("Erro ao editar pedido", err.response.data.message[0]);
+      handleError("Erro ao editar pedido", err.response.data.message);
     }
   },
 

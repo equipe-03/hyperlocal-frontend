@@ -3,22 +3,21 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../API/api";
 import { ListIngradientes } from "../../COMPONENTS/lista-ingredientes/lista-ingredientes";
-import { IngredientPayload } from "../../TYPES/ingredient";
-import "./ingredient.css";
+import { DishPayload } from "../../TYPES/dish";
 
-export function CreateIngredient() {
+export function CreateDish() {
   const navigate = useNavigate();
-  const [ingredients, setIngredients] = useState<IngredientPayload>();
+  const [dishs, setDish] = useState<DishPayload>();
   const { id } = useParams();
 
   useEffect(() => {
-    getIngredientById();
+    getDishById();
   }, []);
 
-  async function getIngredientById() {
+  async function getDishById() {
     if (id) {
-      const ingredient = await api.getIngredientById(id);
-      setIngredients(ingredient);
+      const dish = await api.getDishById(id);
+      setDish(dish);
     }
   }
 
@@ -27,21 +26,22 @@ export function CreateIngredient() {
 
     const formData = new FormData(event.currentTarget);
 
-    const newIngredient = {
+    const newDish = {
       name: formData.get("name")?.toString() || "",
       status: formData.get("status")?.toString() || "",
+      imgDish: formData.get("img")?.toString() || "",
     };
 
-    let ingredientResponse;
+    let dishResponse;
     if (id) {
-      const ingredientToUpdate = { ...newIngredient, id: id };
-      ingredientResponse = await api.patchIngredient(ingredientToUpdate);
+      const ingredientToUpdate = { ...newDish, id: id };
+      dishResponse = await api.patchIngredient(ingredientToUpdate);
     } else {
-      ingredientResponse = await api.postIngredient(newIngredient);
+      dishResponse = await api.postIngredient(newDish);
     }
 
-    if (ingredientResponse) {
-      navigate("/adminIngredient");
+    if (dishResponse) {
+      navigate("/adminDish");
     }
   }
 
@@ -51,7 +51,7 @@ export function CreateIngredient() {
         {id ? "Atualizar ingrediente" : "Criar novo ingrediente"}
         <div className="input">
           <input
-            defaultValue={ingredients?.name}
+            defaultValue={dishs?.name}
             type="text"
             required
             name="name"
@@ -60,15 +60,24 @@ export function CreateIngredient() {
         </div>
         <div className="input">
           <input
-            defaultValue={ingredients?.status}
+            defaultValue={dishs?.status}
             type="text"
             name="status"
             required
             placeholder="Digite o status"
           />
         </div>
+        <div className="input">
+          <input
+            defaultValue={dishs?.imgDish}
+            type="text"
+            name="image"
+            required
+            placeholder="Link da Foto"
+          />
+        </div>
         <button type="submit" className="button">
-          Criar Ingrediente
+          Criar Prato
         </button>
       </form>
     </div>

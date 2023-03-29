@@ -9,11 +9,11 @@ interface IngredientProps {
   updatePage: () => void;
 }
 
-export function CardDelete({ ingredients, updatePage }: IngredientProps) {
+export function CardProfile({ ingredients, updatePage }: IngredientProps) {
   const navigate = useNavigate();
   async function DeleteCard() {
     swal({
-      title: "Tem certeza que deseja deletar o ingrediente?",
+      title: "Tem certeza que deseja deletar a tabela?",
       icon: "warning",
       dangerMode: true,
       buttons: {

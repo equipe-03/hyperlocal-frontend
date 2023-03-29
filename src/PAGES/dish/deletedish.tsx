@@ -1,15 +1,16 @@
 import { useNavigate } from "react-router-dom";
-import { IngredientPayload } from "../../TYPES/ingredient";
+
 import swal from "sweetalert";
 import { api } from "../../API/api";
-import React from "react";
 
-interface IngredientProps {
-  ingredients: IngredientPayload;
+import { DishPayload } from "../../TYPES/dish";
+
+interface DishProps {
+  dishs: DishPayload;
   updatePage: () => void;
 }
 
-export function CardDelete({ ingredients, updatePage }: IngredientProps) {
+export function CardProfile({ dishs, updatePage }: DishProps) {
   const navigate = useNavigate();
   async function DeleteCard() {
     swal({
@@ -33,7 +34,7 @@ export function CardDelete({ ingredients, updatePage }: IngredientProps) {
       },
     }).then(async (res) => {
       if (res) {
-        const isDeleted = await api.deleteIngredient(ingredients.id ?? "");
+        const isDeleted = await api.deleteDish(dishs.id ?? "");
         if (isDeleted) {
           updatePage();
         }
