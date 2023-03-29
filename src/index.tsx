@@ -26,7 +26,7 @@ root.render(
           <Route path="/itens" element={<ItensCategory />} />
           <Route path="/table" element={<Teste />} />
           <Route path="/categorys" element={<Category />} />
-          <Route path="/itens-category" element={<ItensCategory />} />
+          <Route path="/itens-category/:id" element={<ItensCategory />} />
           <Route path="/order" element={<Order />} />
           <Route path="/product" element={<ProductDetail />} />
           <Route path="/side" element={<Side />} />
