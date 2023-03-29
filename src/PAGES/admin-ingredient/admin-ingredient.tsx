@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { api } from '../../API/api'
 import { ListIngradientes } from '../../COMPONENTS/lista-ingredientes/lista-ingredientes'
 import { IngredientPayload } from '../../TYPES/ingredient'
+import './admin-ingredient.css'
 
 export function AdminIngredient() {
 
@@ -18,12 +19,13 @@ export function AdminIngredient() {
 
     return (
         <div className='admin-ingredient'>
-            <div>
+            <h2>Categorias</h2>
+            <div className='list-container'>
                 {ingredientList?.map((ingrediente) => (
                     <ListIngradientes key={ingrediente.id} lista={ingrediente}/>
                 ))}
             </div>
-            <button>Novo Ingrediente</button>
+            <button className='btn-new'>Novo Ingrediente</button>
         </div>
     )
 }
