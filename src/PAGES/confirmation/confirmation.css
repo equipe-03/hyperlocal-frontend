@@ -1,0 +1,37 @@
+.page-confirm {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #CE3246;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.icon-check {
+    font-size: 100px;
+    color: #32CF52;
+}
+
+.confirm {
+    font-size: 32px;
+    color: #FFFDFD; 
+}
+
+.confirm-detail {
+    font-size: 24px;
+    color: #FFFDFD;
+    margin: 0 15px 0 15px;
+}
+
+.btn-page-confirm {
+    margin-top: 10px;
+    height: 48px;
+    width: 216px;
+    border-radius: 8px;
+    color: #CE3246;
+    background-color: #FFFDFD;
+    font-size: 20px;
+}

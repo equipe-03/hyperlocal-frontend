@@ -11,7 +11,7 @@ export function CardCategory({ category }: CardCategoryProps) {
     const navigate = useNavigate()
     return (
         <>
-            <div className='category-card' onClick= {() => navigate('/itens')}>
+            <div className='category-card' onClick= {() => navigate('/itens' + category.id)}>
                 <img className='img-category' src={category.imgCategory} alt="Imagem Categoria" />
                 <div className='title-category'>{category.name}</div>
             </div>

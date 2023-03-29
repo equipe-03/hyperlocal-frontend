@@ -1,6 +1,5 @@
 import axios from "axios";
 import swal from "sweetalert";
-import { Category } from "../PAGES/category/category";
 import { CategoryPayload } from "../TYPES/category";
 import { DishPayload } from "../TYPES/dish";
 import { IngredientPayload } from "../TYPES/ingredient";
@@ -8,7 +7,7 @@ import { OrderPayload } from "../TYPES/order";
 import { TablePayload } from "../TYPES/table";
 import { UserPayload } from "../TYPES/user";
 
-axios.defaults.baseURL = "http://localhost:3333";
+axios.defaults.baseURL = "https://hyperlocal-backend-production.up.railway.app";
 axios.defaults.headers.post["Content-Type"] = "application/json";
 
 function handleError(text: string, description: string) {

@@ -1,5 +1,5 @@
 export interface CategoryPayload {
-    id: string;
+    id?: string;
     name: string;
     imgCategory: string;
 }

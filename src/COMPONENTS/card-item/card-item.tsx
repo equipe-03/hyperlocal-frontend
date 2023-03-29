@@ -12,7 +12,7 @@ export function CardItem({ item }: CardItemProps) {
   const navigate = useNavigate()
 
   return (
-    <div className="card-item" onClick={() => navigate('/product')}>
+    <div className="card-item" onClick={() => navigate('/rota' + item.id)}>
         <img className='img-card-item' src={item.image} alt="Foto do Prato" />
         <div className="information">
             <h2 className='title-card-item'>{item.title}</h2>

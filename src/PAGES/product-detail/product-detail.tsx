@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useParams } from 'react-router-dom';
 import { CarAdicional } from '../../COMPONENTS/card-adicional/card-adicional';
 import { FooterProduct } from '../../COMPONENTS/footer-product/footer-product'
 import { AdicionalPayload } from '../../TYPES/adicional';
@@ -6,7 +7,8 @@ import './product-detail.css'
 
 
 export default function ProductDetail() {
-
+    const { id } = useParams()
+    
     const adds = [{
         id: 'ASSDAS1232344',
         nome: 'Bacon',
@@ -24,6 +26,8 @@ export default function ProductDetail() {
     }]
 
     const [adcList, setAdcList] = useState<AdicionalPayload[]>(adds)
+
+
 
     return (
         <>
