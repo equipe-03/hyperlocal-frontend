@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../API/api";
-import { ListIngradientes } from "../../COMPONENTS/lista-ingredientes/lista-ingredientes";
+import { ListIngradientes } from "../lista-ingredientes/lista-ingredientes";
 import { IngredientPayload } from "../../TYPES/ingredient";
 import "./ingredient.css";
 
@@ -59,13 +59,10 @@ export function CreateIngredient() {
           />
         </div>
         <div className="input">
-          <input
-            defaultValue={ingredients?.status}
-            type="text"
-            name="status"
-            required
-            placeholder="Digite o status"
-          />
+          <select name="status" defaultValue={ingredients?.status} required>
+            <option value="Active">Ativo</option>
+            <option value="Inactive">Inativo</option>
+          </select>
         </div>
         <button type="submit" className="button">
           Criar Ingrediente

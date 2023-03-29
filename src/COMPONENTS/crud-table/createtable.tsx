@@ -27,17 +27,13 @@ export function CreateTable() {
     const formData = new FormData(event.currentTarget);
 
     const newTable = {
-      number: formData.get("number")?.toString() || "",
+      number: Number(formData.get("number")) || 0,
     };
 
     let tableResponse;
-    if (id) {
-      const tableToUpdate = { ...newTable, id: id };
-      // tableResponse = await api.patchIngredient(tableToUpdate);
-    } else {
-      // tableResponse = await api.postIngredient(newTable);
+    if (!id) {
+      tableResponse = await api.postTable(newTable);
     }
-
     if (tableResponse) {
       navigate("/adminIngredient");
     }
