@@ -37,6 +37,7 @@ root.render(
         <Route path="/adminDish" element={< AdminPratos />} />
       </Routes>
     </BrowserRouter>
+
     </GlobalContext>
   </React.StrictMode>
 );

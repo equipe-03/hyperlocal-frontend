@@ -27,7 +27,7 @@ export default function Home({}: Props) {
         <h2 className="home-h2">Escolha uma mesa</h2>
         <div className="home-container">
           {tables.map((tables) => (
-            <HomeItem number={tables.number} />
+            <HomeItem number={tables.number} key={tables.id} />
           ))}
         </div>
       </div>
