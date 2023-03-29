@@ -11,9 +11,9 @@ export function AdminHome() {
         <button className='btn-admin-home' onClick={() => navigate('/adminIngredient')}>Ingredientes</button>
         <button className='btn-admin-home' onClick={() => navigate('/adminCategory')}>Categorias</button>
         <button className='btn-admin-home'onClick={() => navigate('/adminDish')}>Pratos</button>
-        <button className='btn-admin-home'onClick={() => navigate('/adminCategory')}>Pedidos</button>
-        <button className='btn-admin-home'onClick={() => navigate('/adminCategory')}>Mesas</button>
-        <button className='btn-admin-home' onClick={() => navigate('/adminCategory')}>Usuários</button>
+        <button className='btn-admin-home'onClick={() => navigate('/')}>Pedidos</button>
+        <button className='btn-admin-home'onClick={() => navigate('/adminMesas')}>Mesas</button>
+        <button className='btn-admin-home' onClick={() => navigate('/adminUsers')}>Usuários</button>
     </div>
   )
 }
