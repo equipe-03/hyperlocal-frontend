@@ -15,6 +15,8 @@ import { AdminHome } from "./PAGES/admin-home/admin-home";
 import { AdminIngredient } from "./PAGES/admin-ingredient/admin-ingredient";
 import { AdminCategory } from "./PAGES/admin-category/admin-category";
 import { AdminPratos } from "./PAGES/admin-pratos/admin-pratos";
+import { AdminMesas } from "./PAGES/admin-mesa/admin-mesa";
+import { AdminUsers } from "./PAGES/admin-user/admin-user";
 
 
 const root = ReactDOM.createRoot(
@@ -38,10 +40,10 @@ root.render(
         <Route path="/adminIngredient" element={< AdminIngredient />} />
         <Route path="/adminCategory" element={< AdminCategory />} />
         <Route path="/adminDish" element={< AdminPratos />} />
+        <Route path="/adminMesas" element={< AdminMesas />} />
+        <Route path="/adminUsers" element={< AdminUsers />} />
       </Routes>
     </BrowserRouter>
-
-
     </GlobalContext>
   </React.StrictMode>
 );
