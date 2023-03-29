@@ -14,7 +14,6 @@ export function ListIngradientes({ lista }: ListIngredientesProps) {
             <div className='container-name-buttons'>
                 <div className='nome-lista'>{lista.name}</div>
                 <div className='container-buttons'>
-                    <button> <FontAwesomeIcon icon={faPencil} /> </button>
                     <button> <FontAwesomeIcon icon={faTrash} /> </button>
                 </div>
             </div>
