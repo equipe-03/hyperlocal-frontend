@@ -5,15 +5,12 @@ import { CardCategory } from "../../COMPONENTS/card-category/card-category";
 import { CategoryPayload } from "../../TYPES/category";
 import { Header } from "../../COMPONENTS/header/header";
 import { FooterHome } from "../../COMPONENTS/footer-home/footer-home";
-import { useNavigate } from "react-router-dom";
 import { api } from "../../API/api";
 
 export function Category() {
   const [categoryList, setCategoryList] = useState<
     CategoryPayload[] | undefined
   >([]);
-
-  const navigate = useNavigate();
 
   async function AllCategorys() {
     const categorias = await api.getCategory();
