@@ -31,12 +31,13 @@ root.render(
           <Route path="/categorys/" element={<Category />} />
           <Route path="/itens" element={<ItensCategory />} />
           <Route path="/categorys" element={<Category />} />
-          <Route path="/itens-category" element={<ItensCategory />} />
+          <Route path="/itens-category/:id" element={<ItensCategory />} />
           <Route path="/category/create" element={<CreateCategory />} />
           <Route path="/order" element={<Order />} />
-          <Route path="/product" element={<ProductDetail />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
           <Route path="/side" element={<Side />} />
           <Route path="/confirmation" element={<Confirmation />} />
+
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminIngredient" element={<AdminIngredient />} />
           <Route path="/adminCategory" element={<AdminCategory />} />
