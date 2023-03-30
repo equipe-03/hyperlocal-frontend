@@ -437,4 +437,19 @@ export const api = {
       );
     }
   },
+  getDishByCategory: async (
+    categoryId: string
+  ): Promise<ProductPayload[] | undefined> => {
+    try {
+      const dishByCategory = await axios.get("/dish/category/" + categoryId, {
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+      });
+      return dishByCategory.data;
+    } catch (err: any) {
+      handleError(
+        "Erro ao buscar produto",
+        "Erro ao buscar produto tente novamente"
+      );
+    }
+  },
 };
