@@ -4,7 +4,7 @@ export interface DishPayload {
   description: string;
   price: number;
   imgDish: string;
-  categoryId: string;
-  ingredientId: string;
+  categoryId?: string;
+  ingredientId?: string;
   status: string;
 }
