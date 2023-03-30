@@ -6,6 +6,7 @@ import { CategoryPayload } from "../../TYPES/category";
 import { Header } from "../../COMPONENTS/header/header";
 import { FooterHome } from "../../COMPONENTS/footer-home/footer-home";
 import { api } from "../../API/api";
+import { BtnGarcom } from "../../COMPONENTS/btn-garcom/btn-garcom";
 
 export function Category() {
   const [categoryList, setCategoryList] = useState<
@@ -32,6 +33,7 @@ export function Category() {
           ))}
         </div>
       </div>
+      <div className="container-btn-garcom">< BtnGarcom /></div>
       <FooterHome />
     </>
   );

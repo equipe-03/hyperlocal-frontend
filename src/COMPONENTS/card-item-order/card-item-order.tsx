@@ -11,15 +11,15 @@ interface CardItemProps {
 export function CardItemOrder() {
     return (
         <div className='card-item-order'>
-            <img className='img-card-item-order' src='https://www.auau.com.br/image/cache/data/up_system/product-13697/TEXAS-BURGUER-1000x1000.jpg' alt="" />
+            <img className='img-card-item-order' src='https://i.imgur.com/yvZzeSq.jpg' alt="" />
             <div className='information-item'>
                 <div className='box-title-lixeira'>
-                    <div className='title-card-item-order'>X-Salada</div>
+                    <div className='title-card-item-order'>Hambúrguer especial</div>
                     <div className='lixeira-card-item'><FontAwesomeIcon icon={faTrash} /></div>
                 </div>
-                <div className='description-card-item-order'>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div className='description-card-item-order'>Saboroso hambúrguer com picles, queijo e cebola.</div>
                 <div className='box-preco-qtd'>
-                    <div className='preco-card-item-order'>R$ 20,00</div>
+                    <div className='preco-card-item-order'>R$ 12,00</div>
                     <div className='qtd-card-item'>Qtd: 1</div>
                 </div>
             </div>
