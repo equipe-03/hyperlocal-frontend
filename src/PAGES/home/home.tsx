@@ -10,15 +10,14 @@ import "./home.css";
 
 type Props = {};
 
-// eslint-disable-next-line no-empty-pattern
 export default function Home({}: Props) {
   const [tables, setTables] = useState<TablesPayload[]>([]);
   useEffect(() => {
-    async function loadTable() {
+    async function LoadTable() {
       const data = await api.getTable();
       setTables(data as TablesPayload[]);
     }
-    loadTable();
+    LoadTable();
   }, []);
   return (
     <div className="home-content">

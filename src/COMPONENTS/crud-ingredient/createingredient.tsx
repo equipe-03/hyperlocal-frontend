@@ -2,7 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { api } from "../../API/api";
+import { ListIngradientes } from "../lista-ingredientes/lista-ingredientes";
 import { IngredientPayload } from "../../TYPES/ingredient";
+import "./ingredient.css";
 
 export function CreateIngredient() {
   const navigate = useNavigate();
@@ -39,14 +41,33 @@ export function CreateIngredient() {
     }
 
     if (ingredientResponse) {
-      navigate("/ingredient");
+      navigate("/adminIngredient");
     }
   }
 
   return (
-    <div>
-      <div className=""> {ingredients?.name}</div>
-      <div>{ingredients?.status}</div>
+    <div className="body">
+      <form className="formulario" onSubmit={handleSubmit}>
+        {id ? "Atualizar ingrediente" : "Criar novo ingrediente"}
+        <div className="input">
+          <input
+            defaultValue={ingredients?.name}
+            type="text"
+            required
+            name="name"
+            placeholder="Digite o ingrediente"
+          />
+        </div>
+        <div className="input">
+          <select name="status" defaultValue={ingredients?.status} required>
+            <option value="Active">Ativo</option>
+            <option value="Inactive">Inativo</option>
+          </select>
+        </div>
+        <button type="submit" className="button">
+          Criar Ingrediente
+        </button>
+      </form>
     </div>
   );
 }

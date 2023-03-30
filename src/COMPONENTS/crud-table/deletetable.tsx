@@ -1,19 +1,20 @@
 import { useNavigate } from "react-router-dom";
-import { IngredientPayload } from "../../TYPES/ingredient";
+
 import swal from "sweetalert";
 import { api } from "../../API/api";
 import React from "react";
+import { TablePayload } from "../../TYPES/table";
 
-interface IngredientProps {
-  ingredients: IngredientPayload;
+interface TableProps {
+  tables: TablePayload;
   updatePage: () => void;
 }
 
-export function CardProfile({ ingredients, updatePage }: IngredientProps) {
+export function CardTable({ tables, updatePage }: TableProps) {
   const navigate = useNavigate();
   async function DeleteCard() {
     swal({
-      title: "Tem certeza que deseja deletar o ingrediente?",
+      title: "Tem certeza que deseja deletar a tabela?",
       icon: "warning",
       dangerMode: true,
       buttons: {
@@ -33,7 +34,7 @@ export function CardProfile({ ingredients, updatePage }: IngredientProps) {
       },
     }).then(async (res) => {
       if (res) {
-        const isDeleted = await api.deleteIngredient(ingredients.id ?? "");
+        const isDeleted = await api.deleteIngredient(tables.id ?? "");
         if (isDeleted) {
           updatePage();
         }

@@ -1,40 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
+import { api } from '../../API/api'
 import { ListaCategoria } from '../../COMPONENTS/lista-categoria/lista-categoria'
 import { CategoryPayload } from '../../TYPES/category'
 
 export function AdminCategory() {
-    const categoryMoc = [{
-        id: "hnsjdhbasdhasdsd",
-        name: "Pizzas",
-        imgCategory: "aksdknasdjbasdbasj"
-    },
-    {
-        id: "hnsjdhbasdhnmj,ki",
-        name: "Pizzas",
-        imgCategory: "aksdknasdjbasdbasj"
-    },
-    {
-        id: "hnsjdhbasdh",
-        name: "Pizzas",
-        imgCategory: "aksdknasdjbasdbasj"
-    },
-    {
-        id: "hnsjdhbasdh2343245",
-        name: "Pizzas",
-        imgCategory: "aksdknasdjbasdbasj"
-    }]
 
-    const [categoryList, setCategoryList] = useState<CategoryPayload[]>(categoryMoc)
+    const [categoryList, setCategoryList] = useState<CategoryPayload[] | undefined>([])
+
+    async function AllCategorys() {
+        const categorys = await api.getCategory();
+        setCategoryList(categorys)
+    }
+
+    useEffect(() => {
+        AllCategorys();
+      }, []);
 
     return (
-    <div className='admin-category'>
+    <div className='admin-ingredient'>
         <h2>Categorias</h2>
-        <div>
-            {categoryList.map((categoria) => (
+        <div className='list-container'>
+            {categoryList?.map((categoria) => (
                 <ListaCategoria key={categoria.id} lista={categoria}/>
             ))}
         </div>
-        <button>Nova Categoria</button>
+        <button className='btn-new'>Nova Categoria</button>
     </div>
   )
 }

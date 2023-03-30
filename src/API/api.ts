@@ -5,6 +5,7 @@ import { DishPayload } from "../TYPES/dish";
 import { IngredientPayload } from "../TYPES/ingredient";
 import { OrderPayload } from "../TYPES/order";
 import { TablePayload } from "../TYPES/table";
+import { ProductPayload } from "../TYPES/tables";
 import { UserPayload } from "../TYPES/user";
 
 axios.defaults.baseURL = "https://hyperlocal-backend-production.up.railway.app";
@@ -58,7 +59,7 @@ export const api = {
       return newIngredient.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o ingrediente", err.response.data.message[0]);
+      handleError("Erro ao criar o ingrediente", err.response.data.message);
     }
   },
 
@@ -75,7 +76,7 @@ export const api = {
       );
       return updateIngredient.data;
     } catch (err: any) {
-      handleError("Erro ao editar o ingrediente", err.response.data.message[0]);
+      handleError("Erro ao editar o ingrediente", err.response.data.message);
     }
   },
 
@@ -133,7 +134,7 @@ export const api = {
       return newTable.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o tabela", err.response.data.message[0]);
+      handleError("Erro ao criar o tabela", err.response.data.message);
     }
   },
 
@@ -167,15 +168,28 @@ export const api = {
     }
   },
 
-  getDishById: async (dishId: string): Promise<DishPayload | undefined> => {
+  getDishById: async (dishId: string): Promise<ProductPayload> => {
     try {
       const dishid = await axios.get("/dish/find/" + dishId);
+      if (!dishid) {
+        throw new Error("Prato não encontrado");
+      }
       return dishid.data;
     } catch (err) {
       handleError(
         "Prato não foi encontrado",
         "Não há um prato com este id no servidor "
       );
+      return {
+        id: "",
+        name: "",
+        description: "",
+        price: 0,
+        imgDish: "",
+        ingredients: [],
+        categoryId: "",
+        status: "",
+      };
     }
   },
 
@@ -187,7 +201,7 @@ export const api = {
       return newDish.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar o prato", err.response.data.message[0]);
+      handleError("Erro ao criar o prato", err.response.data.message);
     }
   },
 
@@ -198,7 +212,7 @@ export const api = {
       });
       return updateDish.data;
     } catch (err: any) {
-      handleError("Erro ao editar o prato", err.response.data.message[0]);
+      handleError("Erro ao editar o prato", err.response.data.message);
     }
   },
 
@@ -255,7 +269,7 @@ export const api = {
       return newCategory.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar categoria", err.response.data.message[0]);
+      handleError("Erro ao criar categoria", err.response.data.message);
     }
   },
 
@@ -268,7 +282,7 @@ export const api = {
       });
       return updateCategory.data;
     } catch (err: any) {
-      handleError("Erro ao editar categoria", err.response.data.message[0]);
+      handleError("Erro ao editar categoria", err.response.data.message);
     }
   },
 
@@ -327,7 +341,7 @@ export const api = {
       return newUser.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar usuário", err.response.data.message[0]);
+      handleError("Erro ao criar usuário", err.response.data.message);
     }
   },
 
@@ -338,7 +352,7 @@ export const api = {
       });
       return updateUser.data;
     } catch (err: any) {
-      handleError("Erro ao editar usuário", err.response.data.message[0]);
+      handleError("Erro ao editar usuário", err.response.data.message);
     }
   },
   deleteUser: async (userId: string): Promise<boolean | undefined> => {
@@ -393,7 +407,7 @@ export const api = {
       return newOrder.data;
     } catch (err: any) {
       console.log(err);
-      handleError("Erro ao criar pedido", err.response.data.message[0]);
+      handleError("Erro ao criar pedido", err.response.data.message);
     }
   },
 
@@ -404,7 +418,7 @@ export const api = {
       });
       return updateOrder.data;
     } catch (err: any) {
-      handleError("Erro ao editar pedido", err.response.data.message[0]);
+      handleError("Erro ao editar pedido", err.response.data.message);
     }
   },
 
@@ -420,6 +434,21 @@ export const api = {
       handleError(
         "Erro ao deletar o pedido",
         "Ocorreu um erro, tente novamente mais tarde"
+      );
+    }
+  },
+  getDishByCategory: async (
+    categoryId: string
+  ): Promise<ProductPayload[] | undefined> => {
+    try {
+      const dishByCategory = await axios.get("/dish/category/" + categoryId, {
+        headers: { Authorization: "Bearer " + localStorage.getItem("token") },
+      });
+      return dishByCategory.data;
+    } catch (err: any) {
+      handleError(
+        "Erro ao buscar produto",
+        "Erro ao buscar produto tente novamente"
       );
     }
   },
