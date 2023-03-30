@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../API/api";
+import { BtnGarcom } from "../../COMPONENTS/btn-garcom/btn-garcom";
 
 import { FooterHome } from "../../COMPONENTS/footer-home/footer-home";
 import { HeaderHome } from "../../COMPONENTS/header-home/header-home";
@@ -10,7 +11,7 @@ import "./home.css";
 
 type Props = {};
 
-export default function Home({}: Props) {
+export default function Home({ }: Props) {
   const [tables, setTables] = useState<TablesPayload[]>([]);
   useEffect(() => {
     async function LoadTable() {
@@ -30,6 +31,7 @@ export default function Home({}: Props) {
           ))}
         </div>
       </div>
+      <div className="container-btn-garcom">< BtnGarcom /></div>
       <FooterHome />
     </div>
   );
