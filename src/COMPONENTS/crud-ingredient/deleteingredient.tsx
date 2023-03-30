@@ -7,9 +7,14 @@ import React from "react";
 interface IngredientProps {
   ingredients: IngredientPayload;
   updatePage: () => void;
+  onDelete: () => void;
 }
 
-export function CardDelete({ ingredients, updatePage }: IngredientProps) {
+export function CardDelete({
+  ingredients,
+  updatePage,
+  onDelete,
+}: IngredientProps) {
   const navigate = useNavigate();
   async function DeleteCard() {
     swal({
@@ -36,8 +41,11 @@ export function CardDelete({ ingredients, updatePage }: IngredientProps) {
         const isDeleted = await api.deleteIngredient(ingredients.id ?? "");
         if (isDeleted) {
           updatePage();
+          onDelete();
         }
       }
     });
   }
+
+  return <button onClick={DeleteCard}>Delete</button>;
 }
