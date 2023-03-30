@@ -9,6 +9,7 @@ export type ItensPayload = {
   name: string;
   description: string;
   price: number;
+  categoryId: string;
 };
 
 export type ProductPayload = {

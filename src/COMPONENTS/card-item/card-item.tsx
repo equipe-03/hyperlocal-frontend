@@ -14,6 +14,7 @@ export function CardItem({
   name,
   description,
   price,
+  categoryId,
 }: ItensPayload) {
   const navigate = useNavigate();
 
