@@ -11,7 +11,7 @@ export function FooterHome() {
   return (
     <div className="card-footer-home">
         <div className='cardapio' onClick={() => navigate('/categorys')}>< FontAwesomeIcon icon={faList}/>Cardápio</div>
-        <div className='pedido'>< FontAwesomeIcon icon={faBagShopping}/>Pedidos</div>
+        <div className='pedido' onClick={() => navigate('/orderTable')}>< FontAwesomeIcon icon={faBagShopping}/>Pedidos</div>
     </div>
   )
 }

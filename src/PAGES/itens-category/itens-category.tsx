@@ -1,6 +1,7 @@
 /* eslint-disable no-empty-pattern */
 import { useEffect, useState } from "react";
 import { api } from "../../API/api";
+import { BtnGarcom } from "../../COMPONENTS/btn-garcom/btn-garcom";
 import { CardItem } from "../../COMPONENTS/card-item/card-item";
 import { FooterHome } from "../../COMPONENTS/footer-home/footer-home";
 import { Header } from "../../COMPONENTS/header/header";
@@ -31,6 +32,7 @@ export default function ItensCategory({}: Props) {
           />
         ))}
       </div>
+      <div className="container-btn-garcom">< BtnGarcom /></div>
       <FooterHome />
     </div>
   );
