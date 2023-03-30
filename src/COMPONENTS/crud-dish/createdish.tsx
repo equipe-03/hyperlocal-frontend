@@ -29,6 +29,8 @@ export function CreateDish() {
     const newDish = {
       name: formData.get("name")?.toString() || "",
       status: formData.get("status")?.toString() || "",
+      description: formData.get("description")?.toString() || "",
+      price: Number(formData.get("price")),
       imgDish: formData.get("img")?.toString() || "",
       categoryId: id,
       ingredientId: ingredientId,

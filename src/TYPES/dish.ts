@@ -1,5 +1,5 @@
 export interface DishPayload {
-  id?: string;
+  id?: string | undefined;
   name: string;
   description: string;
   price: number;
