@@ -1,0 +1,10 @@
+.btn-garcom {
+    height: 72px;
+    width: 72px;
+    background-color: #CE3246;
+    border: none;
+    font-size: 30px;
+    color: #FFFDFD;
+    border-radius: 50px;
+    cursor: pointer;
+}

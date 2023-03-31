@@ -1,0 +1,59 @@
+
+
+nav {
+  top: 50%;
+  right: 0;
+  left: 0;
+  width: 319px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  position: relative;
+  width: 33.333%;
+  display: table-cell;
+  text-align: center;
+  color: #CE3246;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  transition: 0.2s ease color;
+  padding-top: 90px;
+  text-transform: uppercase;
+}
+
+nav a:before,
+nav a:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.2s ease transform;
+}
+
+nav a:before {
+  top: 0;
+  left: 10px;
+  width: 6px;
+  height: 6px;
+}
+
+nav a:after {
+  top: 5px;
+  left: 18px;
+  width: 4px;
+  height: 4px;
+}
+
+nav a:hover {
+  color: red;
+}
+
+.botao {
+  border: none;
+  background: radial-gradient(circle, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 100%);
+  font-size: medium;
+}

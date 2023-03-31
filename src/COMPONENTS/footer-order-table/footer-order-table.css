@@ -1,0 +1,45 @@
+.footer-order-table {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    height: 10vh;
+    width: 100%;
+}
+
+.container-total {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.price-total {
+    font-size: 24px;
+    color: #32CF52;
+}
+
+.container-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.btn-pedir-mais {
+    height: 38px;
+    width: 160px;
+    border: solid 1px #CE3246;
+    font-size: 16px;
+    border-radius: 8px;
+    background-color: #FFFDFD;
+}
+
+.fechar-conta {
+    height: 38px;
+    width: 159px;
+    background-color: #CE3246;
+    color: #FFFDFD;
+    border-radius: 8px;
+    font-size: 16px;
+}

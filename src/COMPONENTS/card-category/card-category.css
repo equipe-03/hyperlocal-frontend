@@ -1,5 +1,9 @@
-.category-container {
-    position: absolute;
+.category-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
     box-sizing: border-box;
     width: 160px;
     height: 120px;
@@ -7,19 +11,22 @@
     border: 1px solid #E5E5E5;
     box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.05);
     border-radius: 8px;
+    cursor: pointer;
+    
 }
+.category-card:hover{
+    transform: translateY(-0.25rem);
+    box-shadow: 0 1rem 2rem rgba(206, 50, 70, 0.2);
+  
+  }
 
 .img-category{
-    position: absolute;
-    width: 54px;
-    height: 44.8px;
-    left: 53px;
-    top: 16.6px;
+   width: 56px;
+   height: 45px;
 }
 
 .title-category{
-    position: absolute;
-    width: 65px;
+    width: fit-content;
     height: 22px;
     left: 47px;
     top: 82px;

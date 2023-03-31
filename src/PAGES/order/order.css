@@ -1,0 +1,28 @@
+.page-order {
+    background-color: #FFFDFD;;
+}
+
+.btn-adicionar-mais {
+    height: 48px;
+    width: 343px;
+    border: 1px solid #CE3246;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #211415;;
+    background-color: #FFFDFD;
+    margin-top: 10px;
+    cursor: pointer;
+}
+.btn-adicionar-mais:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 1rem 2rem rgba(206, 50, 70, 0.2);
+}
+
+.itens-adc {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    min-height: 70vh;
+    margin-top: 45px;
+}
