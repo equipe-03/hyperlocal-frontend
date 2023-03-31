@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { api } from "../../API/api";
+import { BtnGarcom } from "../../COMPONENTS/btn-garcom/btn-garcom";
 import { CarAdicional } from "../../COMPONENTS/card-adicional/card-adicional";
 import { FooterProduct } from "../../COMPONENTS/footer-product/footer-product";
 import { AdicionalPayload } from "../../TYPES/adicional";
@@ -32,7 +33,6 @@ export default function ProductDetail() {
         status: response.status,
         ingredients: response.ingredients,
       });
-      console.log(response);
     }
     LoadProductById();
   }, []);
@@ -75,7 +75,10 @@ export default function ProductDetail() {
           ))}
         </div>
       </div>
-      <FooterProduct />
+      <div className="container-btn-garcom">
+        <BtnGarcom />
+      </div>
+      <FooterProduct price={product.price} />
     </>
   );
 }
