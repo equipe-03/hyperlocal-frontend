@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHand } from '@fortawesome/free-solid-svg-icons'
 import './btn-garcon.css'
 
-export default function BtnGarcom() {
+export function BtnGarcom() {
   return (
     <button className='btn-garcom'>< FontAwesomeIcon icon={faHand}/></button>
   )

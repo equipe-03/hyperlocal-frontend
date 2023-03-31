@@ -1,8 +1,10 @@
 export interface DishPayload {
-  id?: string;
+  id?: string | undefined;
   name: string;
-  status: string;
+  description: string;
+  price: number;
   imgDish: string;
   categoryId?: string;
-  ingredientId?:string[];
+  ingredientId?: string;
+  status: string;
 }

@@ -9,6 +9,11 @@
     box-sizing: border-box;
     background-color: #FFFDFD;
     border-radius: 8px;
+    cursor: pointer;
+}
+.card-item:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .information {

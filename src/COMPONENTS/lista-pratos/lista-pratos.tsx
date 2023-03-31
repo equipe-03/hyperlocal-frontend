@@ -4,11 +4,13 @@ import { DishPayload } from '../../TYPES/dish'
 import React from 'react'
 import './lista-pratos.css'
 
+
 interface ListaPratosProps {
-    lista: DishPayload
+  lista: DishPayload;
 }
 
 export function ListaPratos({ lista }: ListaPratosProps) {
+
     return (
         <article className="card">
         <img

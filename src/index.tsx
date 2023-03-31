@@ -7,7 +7,6 @@ import ItensCategory from "./PAGES/itens-category/itens-category";
 import Order from "./PAGES/order/order";
 import GlobalContext from "./context";
 import ProductDetail from "./PAGES/product-detail/product-detail";
-import Side from "./COMPONENTS/sidebar/sidebar";
 import Home from "./PAGES/home/home";
 import CreateCategory from "./COMPONENTS/create-form-category/create-form-category";
 import "./index.css";
@@ -19,6 +18,7 @@ import { AdminMesas } from "./PAGES/admin-mesa/admin-mesa";
 import { AdminUsers } from "./PAGES/admin-user/admin-user";
 import { CreateDish } from "./COMPONENTS/crud-dish/createdish";
 import { CreateIngredient } from "./COMPONENTS/crud-ingredient/createingredient";
+import { OrderTable } from "./PAGES/order-table/order-table";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -31,12 +31,11 @@ root.render(
           <Route path="/categorys/" element={<Category />} />
           <Route path="/itens" element={<ItensCategory />} />
           <Route path="/categorys" element={<Category />} />
-          <Route path="/itens-category" element={<ItensCategory />} />
+          <Route path="/itens-category/:id" element={<ItensCategory />} />
           <Route path="/category/create" element={<CreateCategory />} />
           <Route path="/order" element={<Order />} />
-          <Route path="/product" element={<ProductDetail />} />
-          <Route path="/side" element={<Side />} />
-          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/product/:id" element={<ProductDetail />} />
+          <Route path="/" element={<Home />} />
           <Route path="/adminhome" element={<AdminHome />} />
           <Route path="/adminIngredient" element={<AdminIngredient />} />
           <Route path="/adminCategory" element={<AdminCategory />} />
@@ -45,6 +44,8 @@ root.render(
           <Route path="/adminUsers" element={<AdminUsers />} />
           <Route path="/createdish/" element={<CreateDish />} />
           <Route path="/createingredient" element={<CreateIngredient />} />
+          <Route path="/confirmation" element={<Confirmation />} />
+          <Route path="/orderTable" element={<OrderTable />} />
         </Routes>
       </BrowserRouter>
     </GlobalContext>

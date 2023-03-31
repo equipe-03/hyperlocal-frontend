@@ -29,6 +29,8 @@ export function CreateDish() {
     const newDish = {
       name: formData.get("name")?.toString() || "",
       status: formData.get("status")?.toString() || "",
+      description: formData.get("description")?.toString() || "",
+      price: Number(formData.get("price")),
       imgDish: formData.get("img")?.toString() || "",
       categoryId: id,
       ingredientId: ingredientId,
@@ -72,6 +74,22 @@ export function CreateDish() {
             type="text"
             name="image"
             placeholder="Link da Foto"
+          />
+        </div>
+        <div className="input">
+          <input
+            defaultValue={dishs?.description}
+            type="text"
+            name="description"
+            placeholder="Descrição"
+          />
+        </div>
+        <div className="input">
+          <input
+            defaultValue={dishs?.price}
+            type="number"
+            name="price"
+            placeholder="Preço"
           />
         </div>
         <button type="submit" className="button">

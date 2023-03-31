@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../API/api";
+import { BtnGarcom } from "../../COMPONENTS/btn-garcom/btn-garcom";
 
 import { FooterHome } from "../../COMPONENTS/footer-home/footer-home";
 import { HeaderHome } from "../../COMPONENTS/header-home/header-home";
@@ -10,15 +11,14 @@ import "./home.css";
 
 type Props = {};
 
-// eslint-disable-next-line no-empty-pattern
-export default function Home({}: Props) {
+export default function Home({ }: Props) {
   const [tables, setTables] = useState<TablesPayload[]>([]);
   useEffect(() => {
-    async function loadTable() {
+    async function LoadTable() {
       const data = await api.getTable();
       setTables(data as TablesPayload[]);
     }
-    loadTable();
+    LoadTable();
   }, []);
   return (
     <div className="home-content">
@@ -31,6 +31,7 @@ export default function Home({}: Props) {
           ))}
         </div>
       </div>
+      <div className="container-btn-garcom">< BtnGarcom /></div>
       <FooterHome />
     </div>
   );

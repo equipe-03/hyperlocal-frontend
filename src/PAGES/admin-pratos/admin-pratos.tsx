@@ -1,3 +1,4 @@
+
 import React, { useEffect, useState } from 'react'
 import { api } from '../../API/api'
 import { ListaPratos } from '../../COMPONENTS/lista-pratos/lista-pratos'
@@ -6,13 +7,19 @@ import { AdminHome } from '../admin-home/admin-home'
 import './admin-pratos.css'
 
 export function AdminPratos() {
+  const [ingredientList, setIngredientList] = useState<
+    DishPayload[] | undefined
+  >();
 
-    const [ingredientList, setIngredientList] = useState<DishPayload[] | undefined>()
+  async function AllDishs() {
+    const dishs = await api.getDish();
+    setIngredientList(dishs);
+  }
 
-    async function AllDishs () {
-        const dishs = await api.getDish();
-        setIngredientList(dishs)
-    }
+  useEffect(() => {
+    AllDishs();
+  }, [ingredientList]);
+
 
     useEffect(() => {
         AllDishs();
@@ -36,4 +43,3 @@ export function AdminPratos() {
 
     )
 }
-
