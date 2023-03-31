@@ -33,7 +33,6 @@ export default function ProductDetail() {
         status: response.status,
         ingredients: response.ingredients,
       });
-      console.log(response);
     }
     LoadProductById();
   }, []);
@@ -76,8 +75,10 @@ export default function ProductDetail() {
           ))}
         </div>
       </div>
-      <div className="container-btn-garcom">< BtnGarcom /></div>
-      <FooterProduct />
+      <div className="container-btn-garcom">
+        <BtnGarcom />
+      </div>
+      <FooterProduct price={product.price} />
     </>
   );
 }

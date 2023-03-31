@@ -11,6 +11,11 @@
     color: #211415;;
     background-color: #FFFDFD;
     margin-top: 10px;
+    cursor: pointer;
+}
+.btn-adicionar-mais:hover {
+    transform: translateY(-0.15rem);
+    box-shadow: 0 1rem 2rem rgba(206, 50, 70, 0.2);
 }
 
 .itens-adc {
