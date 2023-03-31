@@ -24,10 +24,12 @@ export function CardItemOrder() {
           </div>
         </div>
         <div className="description-card-item-order">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Um delicioso sanduíche de hambúrguer grelhado, com queijo, alface,
+          tomate fresco e maionese caseira, servido em um pão de hambúrguer
+          macio.
         </div>
         <div className="box-preco-qtd">
-          <div className="preco-card-item-order">R$ 20,00</div>
+          <div className="preco-card-item-order">R$ 15,00</div>
           <div className="qtd-card-item">Qtd: 1</div>
         </div>
       </div>
