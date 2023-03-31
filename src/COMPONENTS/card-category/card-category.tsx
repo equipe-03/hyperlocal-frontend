@@ -13,7 +13,6 @@ export function CardCategory({ category }: CardCategoryProps) {
     <>
       <div
         className="category-card"
-        // onClick={() => navigate("/itens-category/" + category.id)}
         onClick={() => navigate(`/itens-category/${category.id}`)}
       >
         <img
