@@ -29,7 +29,7 @@ export function CardItemOrder() {
           macio.
         </div>
         <div className="box-preco-qtd">
-          <div className="preco-card-item-order">R$ 15,00</div>
+          <div className="preco-card-item-order">R$ 12,00</div>
           <div className="qtd-card-item">Qtd: 1</div>
         </div>
       </div>
