@@ -76,6 +76,22 @@ export function CreateDish() {
             placeholder="Link da Foto"
           />
         </div>
+        <div className="input">
+          <input
+            defaultValue={dishs?.description}
+            type="text"
+            name="description"
+            placeholder="Descrição"
+          />
+        </div>
+        <div className="input">
+          <input
+            defaultValue={dishs?.price}
+            type="number"
+            name="price"
+            placeholder="Preço"
+          />
+        </div>
         <button type="submit" className="button">
           Criar Prato
         </button>
