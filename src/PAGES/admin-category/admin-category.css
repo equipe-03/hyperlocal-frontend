@@ -1,0 +1,14 @@
+.list-container {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.text_title {
+    font-size: 2.25rem;
+    font-family: var(--font-title);
+    color: #CE3246;
+    line-height: 1.1;
+}
+
